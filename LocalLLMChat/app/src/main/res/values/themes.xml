@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.LocalLLMChat" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/indigo_primary</item>
+        <item name="colorSecondary">@color/cyan_accent</item>
+        <item name="android:windowBackground">@color/cosmic_bg</item>
+        <item name="android:statusBarColor">@color/cosmic_bg</item>
+        <item name="android:navigationBarColor">@color/cosmic_bg</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+
+    <style name="Theme.LocalLLMChat" parent="Base.Theme.LocalLLMChat" />
+
+    <style name="Theme.LocalLLMChat.NoActionBar" parent="Theme.LocalLLMChat" />
+</resources>

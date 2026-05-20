@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cosmic_bg">
+
+    <!-- 3D WebGL Hologram Viewport -->
+    <WebView
+        android:id="@+id/avatarWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" />
+
+    <!-- Top Floating Close Navigation -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="top|start"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_menu_revert"
+        android:background="@drawable/icon_button_bg"
+        android:contentDescription="Close Hologram View"
+        android:tint="@color/text_primary" />
+
+    <!-- Sleek Floating Dialogue Bubble Trigger -->
+    <LinearLayout
+        android:id="@+id/dialogueTriggerCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="16dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/glass_card_bg">
+
+        <TextView
+            android:id="@+id/triggerBubbleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💬 View Dialogue Transcript"
+            android:textColor="@color/cyan_accent"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05" />
+    </LinearLayout>
+
+    <!-- Bottom Controls & Microphone Deck -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="48dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Glowing Floating Mic Button -->
+        <ImageButton
+            android:id="@+id/micButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/mic_button_glowing"
+            android:src="@android:drawable/ic_btn_speak_now"
+            android:scaleType="centerInside"
+            android:contentDescription="Microphone Dictation"
+            android:layout_marginBottom="16dp"
+            android:tint="@color/white" />
+
+        <!-- Status Prompt Indicator -->
+        <TextView
+            android:id="@+id/avatarStatusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔮 TAP DECK TO START CHATTING"
+            android:textColor="@color/glow_highlight"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:fontFamily="sans-serif-monospace" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "719986818608",
+    "project_id": "llm-mobile-7ef81",
+    "storage_bucket": "llm-mobile-7ef81.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:719986818608:android:a26864bdc6f747d04977f5",
+        "android_client_info": {
+          "package_name": "com.chahbane.localllmchat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEaJoDW2v-h7OiUW17P63ClinooAW3YUE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

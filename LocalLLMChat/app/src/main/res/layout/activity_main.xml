@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cosmic_bg"
+    android:fitsSystemWindows="true">
+
+    <!-- Top Premium Navigation & Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:background="@color/cosmic_card"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✨ Chahbane AI"
+                android:textSize="20sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOCAL RAG CORE • DEEPSEEK"
+                android:textSize="10sp"
+                android:textColor="@color/cyan_accent"
+                android:letterSpacing="0.1"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Avatar Hologram launcher -->
+        <ImageButton
+            android:id="@+id/avatarScreenButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@android:drawable/btn_star_big_on"
+            android:background="@drawable/icon_button_bg"
+            android:padding="8dp"
+            android:contentDescription="Launch 3D Avatar hologram"
+            android:layout_marginEnd="10dp" />
+
+        <!-- Logout Action -->
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="DISCONNECT"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:backgroundTint="#2D1E29"
+            android:textColor="#EF4444"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp" />
+    </LinearLayout>
+
+    <!-- Location Status HUD Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="#10182E">
+
+        <TextView
+            android:id="@+id/locationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📍 GPS Location: Syncing Neural Coordinates..."
+            android:textSize="11sp"
+            android:textColor="@color/glow_highlight"
+            android:fontFamily="sans-serif-monospace" />
+    </LinearLayout>
+
+    <!-- RAG Document Switch HUD Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical"
+        android:background="#0D1324">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Integrate RAG Document Knowledge Base"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="sans-serif-medium" />
+
+        <Switch
+            android:id="@+id/ragSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:thumbTint="@color/cyan_accent"
+            android:trackTint="@color/input_border"
+            android:minHeight="48dp"
+            android:minWidth="48dp" />
+    </LinearLayout>
+
+    <!-- Main Chat Workspace ScrollView -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/cosmic_bg"
+        android:padding="16dp"
+        android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/chatHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👋 Secure neural terminal initialized.\n\nReady for query...\n\n"
+            android:textSize="15sp"
+            android:textColor="@color/text_primary"
+            android:lineSpacingMultiplier="1.2"
+            android:fontFamily="sans-serif" />
+    </ScrollView>
+
+    <!-- Chat Console Input Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="@color/cosmic_card"
+        android:gravity="center_vertical">
+
+        <!-- Message Input Console -->
+        <EditText
+            android:id="@+id/messageInput"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Transmit query to AI..."
+            android:textColorHint="@color/text_secondary"
+            android:textColor="@color/text_primary"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="@drawable/edit_text_bg"
+            android:textSize="15sp"
+            android:maxLines="3"
+            android:minHeight="48dp" />
+
+        <!-- Camera Scanner OCR -->
+        <ImageButton
+            android:id="@+id/cameraButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@android:drawable/ic_menu_camera"
+            android:background="@drawable/icon_button_bg"
+            android:contentDescription="Camera OCR Scanner"
+            android:layout_marginStart="8dp" />
+
+        <!-- Voice Recognition -->
+        <ImageButton
+            android:id="@+id/micButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@android:drawable/ic_btn_speak_now"
+            android:background="@drawable/icon_button_bg"
+            android:contentDescription="Voice Input"
+            android:layout_marginStart="8dp" />
+
+        <!-- Transmit Trigger Button -->
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:text="SEND"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@drawable/premium_button_bg"
+            android:layout_marginStart="8dp"
+            android:minHeight="44dp" />
+    </LinearLayout>
+
+</LinearLayout>
